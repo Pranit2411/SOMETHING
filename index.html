@@ -1,0 +1,37 @@
+<html>
+<body>
+
+<form>
+    <input type="text" id="name" placeholder="Enter your name">
+    <input type="email" id="email" placeholder="Enter your Email">
+    <input type="password" id="pwd" placeholder="Enter Password">
+    <button onclick="SaveData()">Submit</button>
+    
+</form>
+<h1>Your Details</h1>
+<p id="Para">      </p>
+    <button onclick="Display()">Display</button>
+<script>
+        function SaveData()
+        {    
+            const name =document.getElementById("name").value;
+            const email =document.getElementById("email").value;
+            const pwd =document.getElementById("pwd").value;
+            localStorage.setItem('Name',name);
+            localStorage.setItem('Email',email);
+            localStorage.setItem('pwd',pwd);
+        }
+        function Display()
+        {
+            const nam=localStorage.getItem('Name');
+            const em=localStorage.getItem('Email');
+            const pw=localStorage.getItem('pwd');
+            // var req=new XMLHttpRequest()
+            // req.onreadystatechange=function() {
+            // if(this.readyState == 4 && this.status == 200){}}
+            document.getElementById('Para').innerHTML="Name : "+nam+"<br>Email : "+em+"<br>Password : "+pw;
+            }
+</script>
+
+</body>
+</html>
