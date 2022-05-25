@@ -1,0 +1,28 @@
+.sidebars
+{
+    height: 600px;
+}
+#Container
+{
+    width: auto;
+    height: 70px;
+    border-bottom: 1px solid grey;
+    position:relative;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.logo
+{
+    height:65px;
+    width: 100px;
+}
+.logo a
+{
+    text-decoration: none;
+    padding: 5px;
+    font-size: 30px;
+    padding-left: 30px;
+    margin-top: 8px;
+    position: fixed;
+}
