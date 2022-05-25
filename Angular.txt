@@ -1,0 +1,57 @@
+TO BE ADDED IN APP.COMPONENT.HTML
+-----------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .text-danger
+    {
+      color: Red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form #signup="ngForm" (ngSubmit)="submit(signup)">
+  
+      <input type="text" name="name" placeholder="Enter Your Name" #name="ngModel" required ngModel/>
+      <!-- <div *ngIf ="name.invalid && name.touched" class="text-danger"></div>
+      <div *ngIf= "name.errors && name.errors['required']" class="text-danger">Name is Required</div> -->
+  
+      <input type="email" name="email" placeholder="Enter Your Email" #email="ngModel" required ngModel/>
+      <!-- <div *ngIf ="email.invalid && email.touched" class="text-danger"></div>
+      <div *ngIf= "email.errors && email.errors['required']" class="text-danger">Email is Required</div> -->
+
+      <input type="password" name="password" placeholder="Enter Your password" #password="ngModel" required ngModel/>
+      <!-- <div *ngIf ="password.invalid && password.touched" class="text-danger"></div>
+      <div *ngIf= "password.errors && password.errors['required']" class="text-danger">password is Required</div> -->
+      <button type="submit" class="btn">Sign UP</button>
+      <p>Hello</p>
+    </form>
+  </div>  
+</body>
+</html>
+
+
+
+TO BE ADDED IN APP.MODULE.TS
+---------------------------------------------------
+imports: [
+    BrowserModule,
+    AppRoutingModule,FormsModule,ReactiveFormsModule
+  ]
+
+
+
+TO BE ADDED IN APP.COMPONENT.TS
+IN EXPORT class
+--------------------------------------------
+submit(signup:any)
+{
+    console.log(signup.value);
+}

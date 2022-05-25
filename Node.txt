@@ -1,0 +1,19 @@
+TO BE ADDED IN INDEX.js
+---------------------------------------------
+
+const express=require('express')
+const app =express()
+
+app.use(express.static('public'))
+app.listen(3000,()=>
+{
+    console.log("Application Started")
+})
+
+
+
+
+TO BE ADDED IN PACKAGE.json    in scripts{ }
+-------------------------------------------------
+
+"start": "node index.js"
